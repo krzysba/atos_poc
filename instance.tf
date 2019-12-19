@@ -10,7 +10,7 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
   provisioner "file" {
-    source      = "index2.html"
+    source      = "index.html"
     destination = "/tmp/index.html"
   }
 
