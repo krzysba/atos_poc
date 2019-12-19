@@ -1,8 +1,8 @@
-#commented resources needed from local machine
-#resource "aws_key_pair" "frankfurt_k_p" {
-#  key_name   = "frankfurt_k_p"
-#  public_key = file(var.PATH_TO_PUBLIC_KEY)
-#}
+commented resources needed from local machine
+resource "aws_key_pair" "frankfurt_k_p" {
+  key_name   = "frankfurt_k_p"
+  public_key = file(var.PATH_TO_PUBLIC_KEY)
+}
 
 resource "aws_instance" "example" {
   ami           = var.AMIS[var.AWS_REGION]
