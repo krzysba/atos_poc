@@ -1,16 +1,15 @@
-#resource "aws_key_pair" "frankfurt_k_p" {
-#  key_name   = "frankfurt_k_p"
-#  public_key = file(var.PATH_TO_PUBLIC_KEY)
-#}
+#Author
+#Krzysztof Barabasz
+#Atos PoC DevOps Community
 
-resource "aws_instance" "example" {
+resource "aws_instance" "instancja_krzyska" {
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
   key_name      = "frankfurt_k_p"
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
   provisioner "file" {
-    source      = "index3.html"
+    source      = "index.html"
     destination = "/tmp/index.html"
   }
 

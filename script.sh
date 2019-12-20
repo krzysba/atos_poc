@@ -5,7 +5,7 @@ until [[ -f /var/lib/cloud/instance/boot-finished ]]; do
   sleep 1
 done
 
-# install nginx
+# install httpd
 #sudo yum update -y
 sudo yum install httpd -y
 
