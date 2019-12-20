@@ -2,14 +2,14 @@
 #Krzysztof Barabasz
 #Atos PoC DevOps Community
 
-resource "aws_instance" "instancja2_krzyska" {
+resource "aws_instance" "instancja_krzyska" {
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
   key_name      = "frankfurt_k_p"
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
   provisioner "file" {
-    source      = "index2.html"
+    source      = "index.html"
     destination = "/tmp/index.html"
   }
 
