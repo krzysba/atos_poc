@@ -9,7 +9,7 @@ resource "aws_instance" "instancja_krzyska" {
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
   provisioner "file" {
-    source      = "index2.html"
+    source      = "index3.html"
     destination = "/tmp/index.html"
   }
 
